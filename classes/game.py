@@ -27,13 +27,16 @@ class Game:
     def draw(self):
         self.board.draw(self.screen)
 
+    def update(self):
+        self.board.update()
+
     def run(self):
         while self.running:
             self.clock.tick(FPS)
 
             self.handleEvents()
 
-            # self.update()
+            self.update()
         
             self.draw()
 
