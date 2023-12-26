@@ -26,7 +26,7 @@ class ChessBoard:
         pieces = ['r','n','b','q','k','p','R','N','B','Q','K','P']
 
         for piece in pieces:
-            image_path = f'assets/{piece}.png'
+            image_path = f"assets/{'white' if piece.isupper() else 'black'}-{piece}.png"
             image = pygame.image.load(image_path)
             self.piece_image[piece] = pygame.transform.scale(image, (80, 80))
             
